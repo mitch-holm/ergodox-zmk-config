@@ -2,9 +2,6 @@
 
 / {
 	chosen {
-		// Studio requires the physical layout (which carries the transform)
-		// instead of a directly chosen matrix transform.
-		/delete-property/ zmk,matrix_transform;
 		zmk,physical-layout = &physical_layout0;
 	};
 

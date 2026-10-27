@@ -9,6 +9,13 @@
 #define LAYER_SYS 3
 
 / {
+	// ZMK Studio needs the physical layout (which carries the transform) rather
+	// than a directly chosen matrix transform. This lives here, not in the
+	// overlay, because the keymap is applied after the shield.
+	chosen {
+		/delete-property/ zmk,matrix_transform;
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 
